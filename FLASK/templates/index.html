@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Movie Recommender</title>
+    <style>
+      body {
+        background: linear-gradient(45deg, #8e2de2, #4a00e0);
+        text-align: center;
+      }
+      form {
+        display: inline-block;
+        margin: 0 auto;
+        text-align: left;
+        width: 500px;
+      }
+      h1, h2 {
+        color: white;
+      }
+      table {
+        border-collapse: collapse;
+        margin: 0 auto;
+        width: 500px;
+      }
+      td, th {
+        border: 1px solid white;
+        padding: 10px;
+      }
+      th {
+        text-align: left;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        display: inline-block;
+        margin: 10px;
+      }
+      input[type="text"] {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Movie Recommender</h1>
+    <p>Enter your ratings for up to 3 movies:</p>
+    <form method="POST" action="/predict">
+      <table>
+        <tr>
+          <th>Movie</th>
+          <th>Rating</th>
+        </tr>
+        <tr>
+          <td><input type="text" id="movie_1" name="movie_1"></td>
+          <td><input type="text" id="rating_1" name="rating_1"></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="movie_2" name="movie_2"></td>
+          <td><input type="text" id="rating_2" name="rating_2"></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="movie_3" name="movie_3"></td>
+          <td><input type="text" id="rating_3" name="rating_3"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit" value="Predict"></td>
+        </tr>
+      </table>
+    </form>
+    {% if my_list %}
+      <h2>Recommended Movies:</h2>
+      <ul>
+        {% for movie in my_list %}
+          <li>{{ movie }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </body>
