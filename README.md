@@ -23,11 +23,11 @@ A content-based recommender system works by creating a user profile based on the
 
 To build the content-based recommendation model, we will follow these steps:
 
-    Preprocess the dataset by handling missing values and performing data transformations.
-    Generate a list of genres to simplify the recommendation process.
-    Create a one-hot encoding matrix based on the different genres for each movie.
-    Build a user profile based on the user's ratings.
-    Recommend the top 5 movies with the highest scores.
+* Preprocess the dataset by handling missing values and performing data transformations.
+* Generate a list of genres to simplify the recommendation process.
+* Create a one-hot encoding matrix based on the different genres for each movie.
+* Build a user profile based on the user's ratings.
+* Recommend the top 5 movies with the highest scores.
 
 Check out the <b>Content Based Recommendation System.ipynb.</b>
 
@@ -37,12 +37,12 @@ A collaborative-based recommendation system takes into account the preferences a
 
 To build the collaborative-based recommendation model, we will follow these steps:
 
-    Preprocess the dataset by handling missing values and performing data transformations.
-    Select a user and the movies they have watched.
-    Find the top 100 nearest neighbors based on the user's ratings.
-    Get the watched movie records for each neighbor.
-    Calculate a similarity score using a chosen formula.
-    Recommend the top 5 items with the highest scores.
+* Preprocess the dataset by handling missing values and performing data transformations.
+* Select a user and the movies they have watched.
+* Find the top 100 nearest neighbors based on the user's ratings.
+* Get the watched movie records for each neighbor.
+* Calculate a similarity score using a chosen formula.
+* Recommend the top 5 items with the highest scores.
 
 Check out the <b>Collaborative Based Filtering System.ipynb.</b>
 
@@ -54,6 +54,6 @@ Flask Web Framework - It is one of the best web framework to deploy your models 
 
 To run the Flask application, add the dataset files to the FLASK folder. On the terminal, type python app.py. It will take few seconds to launch. Once it indicates that it is running, enter localhost:8080 in web browser.
 
-![alt text](https://github.com/adiark/Movie-Recommendation/blob/main/FLASK/app_images/Picture.jpg)
+![alt text](https://github.com/adiark/Movie-Recommendation/blob/main/FLASK/app_images/Picture_1.png)
 
-![alt text](https://github.com/adiark/Movie-Recommendation/blob/main/FLASK/app_images/Picture1.jpg)
+![alt text](https://github.com/adiark/Movie-Recommendation/blob/main/FLASK/app_images/Picture_2.png)
